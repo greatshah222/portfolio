@@ -1,0 +1,157 @@
+/* hamburger menu for smaller screen */
+.HamBurgerMenu {
+  width: 1.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.HamBurgerMenu span {
+  display: block;
+  width: 2rem;
+  height: 2.5px;
+  background: var(--lightYellow);
+}
+
+/* // till here */
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  min-height: 8vh;
+  width: 80%;
+  margin: auto;
+}
+.mainContaniner {
+  background-color: var(--mainWhite);
+}
+.logo {
+  flex: 2;
+  height: 40px;
+  width: auto;
+}
+.DesktopNav {
+  flex: 2;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: auto;
+}
+.navUl {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  list-style: none;
+  color: white;
+}
+.navUl a {
+  color: black;
+  text-decoration: none;
+  font-size: 120%;
+  padding: 12px 15px;
+  border-radius: 28px;
+  font-weight: 500;
+}
+
+.navUl a.active,
+.navUl a:active {
+  background-color: var(--mainActive);
+}
+.navUl a:hover {
+  background-color: var(--mainHover);
+}
+.navUl li {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    flex: 1;
+  }
+  .navContainer {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1250px) {
+  .logo {
+    flex: 1.7;
+  }
+  .DesktopNav {
+    flex: 1.5;
+  }
+}
+
+/* // for height 800 make mobile screen */
+
+@media (min-width: 800px) {
+  .HamBurgerMenu {
+    display: none;
+  }
+}
+/* // till 900px */
+@media (max-width: 800px) {
+  .DesktopNav {
+    display: none;
+  }
+
+  .navUl {
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navUl a.active,
+  .navUl a:active {
+    background-color: var(--mainActive);
+    color: black;
+    padding: 12px 20px;
+  }
+  .navUl a:hover {
+    background-color: var(--mainHover);
+    color: var(--lightYellow);
+  }
+  .navUl a {
+    color: black;
+    font-size: 130%;
+  }
+
+  /* // closing side bar bar button when inside the sideBar */
+  .closeSideBarButton {
+    flex: 1;
+    font-size: 4rem;
+    border: none;
+    cursor: pointer;
+    color: var(--lightYellow);
+    outline: none;
+  }
+  .closeSideBarButton:hover {
+    color: black;
+  }
+  .headerMobileNav {
+    display: flex;
+    align-items: center;
+    background-color: var(--mainActive);
+    min-height: 10vh;
+  }
+  .logoSideBar {
+    flex: 10;
+    height: 40px;
+    width: auto;
+  }
+  .MobileNav {
+    height: 60%;
+  }
+}
