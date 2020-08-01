@@ -28,7 +28,7 @@
   margin: auto;
 }
 .mainContaniner {
-  background-color: var(--mainWhite);
+  background: white;
 }
 .logo {
   flex: 2;
@@ -76,18 +76,18 @@ nav {
   .logo {
     flex: 1;
   }
-  .navContainer {
-    width: 100%;
-    margin: auto;
-  }
 }
 
 @media (max-width: 1250px) {
   .logo {
-    flex: 1.7;
+    flex: 1.2;
   }
   .DesktopNav {
     flex: 1.5;
+  }
+  .navContainer {
+    width: 100%;
+    margin: auto;
   }
 }
 

@@ -17,13 +17,15 @@ code {
   box-sizing: border-box;
 }
 :root {
-  --mainBlue: #2a2a72;
+  --mainBlue: #e0fcff;
+  --darkBlue: #2caeba;
   --lightBlue: #009ffd;
-  --mainWhite: #f3f3ff;
+  --mainWhite: #fafafa;
   --mainDark: #232528;
   --mainYellow: #ffa400;
   --lightYellow: hsl(42, 78%, 60%);
   --mainBlack: black;
   --mainHover: rgba(226, 226, 226, 0.514);
   --mainActive: rgba(169, 169, 169, 0.4);
+  --icon: hsl(209, 61%, 16%);
 }

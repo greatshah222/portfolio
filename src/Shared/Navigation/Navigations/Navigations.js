@@ -5,10 +5,11 @@ import Navlinks from '../Navlinks/Navlinks';
 import logo from '../../../Assets/Images/logo.svg';
 
 function Navigations() {
-  const [openSideBar, setOpenSideBar] = useState(true);
+  const [openSideBar, setOpenSideBar] = useState(false);
   const toggleSideBarHandler = () => {
     setOpenSideBar((openSideBar) => !openSideBar);
   };
+
   return (
     <>
       <SideBar show={openSideBar}>
@@ -26,7 +27,7 @@ function Navigations() {
         </nav>
       </SideBar>
       <>
-        <div className={classes.mainContaniner}>
+        <div className={`${classes.mainContaniner}`}>
           <div className={classes.navContainer}>
             <img src={logo} alt='logo' className={classes.logo} />
             <button
