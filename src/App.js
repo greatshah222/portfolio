@@ -5,6 +5,7 @@ import FrontPage from './Hero/pages/FrontPage';
 import './Shared/FontAwesomeIcon/FontAwesome';
 import About from './About/About';
 import Services from './Services/Services';
+import Experience from './Experience/Experience';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navigations />
       <FrontPage />
       <Services />
+      <Experience />
       <About />
     </>
   );

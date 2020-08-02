@@ -2,7 +2,7 @@ import React from 'react';
 import profile from '../../Assets/Images/hero-img.jpeg';
 import classes from './FrontPage.module.css';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -41,9 +41,9 @@ function FrontPage() {
           <img src={profile} alt='profile' />
         </div>
       </div>
-      <div className={classes.stars}></div>
+      {/* <div className={classes.stars}></div>
       <div className={classes.stars2}></div>
-      <div className={classes.stars3}></div>
+      <div className={classes.stars3}></div> */}
     </section>
   );
 }

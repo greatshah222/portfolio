@@ -29,6 +29,7 @@ function Button({
       className={`${classes.Button} ${classes[btnType]}`}
       disabled={disabled}
       type={type}
+      style={style}
       onClick={onClick}
     >
       {children}

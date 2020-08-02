@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDev } from 'react-icons/fa';
+import { FaDev, FaRegGem, FaAndroid } from 'react-icons/fa';
 import classes from './Services.module.css';
 
 function Services() {
@@ -12,6 +12,7 @@ function Services() {
             <FaDev className={classes.socialIcon} />
           </div>
           <h3 className={classes.title}>Web Development</h3>
+          <div className={classes.underline}></div>
           <p className={classes.info}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga,
             maiores?
@@ -19,19 +20,20 @@ function Services() {
         </div>
         <div className={classes.ServicesSecondary}>
           <div className={classes.logo}>
-            <FaDev className={classes.socialIcon} />
+            <FaRegGem className={classes.socialIcon} />
           </div>
-          <h3 className={classes.title}>Web Development</h3>
+          <h3 className={classes.title}>Web Design</h3>
+          <div className={classes.underline}></div>
           <p className={classes.info}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga,
             maiores?
           </p>
-        </div>{' '}
+        </div>
         <div className={classes.ServicesSecondary}>
           <div className={classes.logo}>
-            <FaDev className={classes.socialIcon} />
+            <FaAndroid className={classes.socialIcon} />
           </div>
-          <h3 className={classes.title}>Web Development</h3>
+          <h3 className={classes.title}>App Design</h3>
           <div className={classes.underline}></div>
           <p className={classes.info}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga,

@@ -78,6 +78,7 @@
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
+
 .link:hover {
   background-color: transparent;
   color: var(--mainBlue);
