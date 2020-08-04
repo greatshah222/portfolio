@@ -1,26 +1,35 @@
 import React from 'react';
 import './App.css';
-import Navigations from './Shared/Navigation/Navigations/Navigations';
-import FrontPage from './Hero/pages/FrontPage';
+
 import './Shared/FontAwesomeIcon/FontAwesome';
+
+import MainPage from './Hero/MainPage';
+import { Switch, Route } from 'react-router-dom';
 import About from './About/About';
-import Services from './Services/Services';
-import Experience from './Experience/Experience';
-import FeaturedProjects from './FeaturedProjects/FeaturedProjects';
-import Skills from './Skills/Skills';
+import Contactme from './Contactme/Contactme';
+import Project from './Projects/Project';
 import Footer from './Footer/Footer';
+import Navigations from './Shared/Navigation/Navigations/Navigations';
 
 function App() {
   return (
     <>
       <Navigations />
-      <FrontPage />
-      <Services />
-      <Experience />
-      <FeaturedProjects />
-      <Skills />
+      <Switch>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/contactme'>
+          <Contactme />
+        </Route>
+        <Route path='/projects'>
+          <Project />
+        </Route>
+        <Route path='/'>
+          <MainPage />
+        </Route>
+      </Switch>
       <Footer />
-      <About />
     </>
   );
 }

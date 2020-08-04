@@ -17,7 +17,7 @@ function Navlinks(props) {
       <li>
         <NavLink
           onClick={props.closeSideBar}
-          to='/ufibiu'
+          to='/about'
           activeClassName={classes.active}
           exact
         >
@@ -27,7 +27,7 @@ function Navlinks(props) {
       <li>
         <NavLink
           onClick={props.closeSideBar}
-          to='/ufibiu'
+          to='/projects'
           activeClassName={classes.active}
           exact
         >
@@ -37,7 +37,7 @@ function Navlinks(props) {
       <li>
         <NavLink
           onClick={props.closeSideBar}
-          to='/ufibiu'
+          to='/contactme'
           activeClassName={classes.active}
           exact
         >

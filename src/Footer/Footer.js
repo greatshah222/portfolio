@@ -96,7 +96,7 @@ function Footer() {
               <h5>great.shah222@gmail.com</h5>
             </div>
           </div>
-          <div data-aos='fade-up-left' className={classes.Contactme}>
+          <div data-aos='fade-left' className={classes.Contactme}>
             <h4 className={classes.heading}>Contact Me</h4>
             <form className={classes.FooterForm}>
               <input type='text' placeholder='Enter your Email' />
