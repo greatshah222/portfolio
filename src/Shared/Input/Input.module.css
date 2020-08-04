@@ -1,10 +1,9 @@
 /* for the background color of the form and image */
 
 .formPrimary {
-  background-color: rgba(36, 33, 33, 0.603);
+  background-color: var(--darkBlue);
   width: 100vw;
-  height: 60vh;
-  padding-bottom: 2rem;
+  height: 100vh;
 }
 /* // for image and form to align flex */
 .formSecondary {
@@ -173,5 +172,9 @@
 
   .formInput {
     width: 100%;
+  }
+  .formPrimary {
+    height: 70vh;
+    padding-bottom: 5rem;
   }
 }

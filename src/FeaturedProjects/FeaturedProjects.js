@@ -9,47 +9,12 @@ import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
 
 function FeaturedProjects() {
   useEffect(() => {
-    AOS.init({ duration: 5000 });
+    AOS.init({ duration: 500 });
   }, []);
   return (
     <div className={styles.backgroundColorPrimary}>
       <section className={styles.projects}>
         <h2>Featured Projects</h2>
-        <div className={styles.project}>
-          <div className={styles.projectImg}>
-            <img src={Image} alt='imageP' className={styles.projectImage} />
-          </div>
-
-          <div data-aos='flip-up' className={styles.projectInfo}>
-            <span className={styles.projectNumber}>0</span>
-            <h3>React Ecommerce Project</h3>
-            <p className={styles.projectDesc}>
-              A simple ecommerce project which uses the basic concept of react
-              and react-router. The paypal system has also been integrated with
-              the deduction of amout according to the cart total.
-            </p>
-            <div className={styles.projectStack}>
-              <span>Redux</span>
-              <span>React-Router</span>
-            </div>
-            <div className={styles.projectLinks}>
-              <a
-                href='https://github.com/greatshah222/Ecommerce_React '
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaGithubSquare className={styles.projectIcon} />
-              </a>
-              <a
-                href='https://react-ecommerce-shah-bishal.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaShareSquare className={styles.projectIcon} />
-              </a>
-            </div>
-          </div>
-        </div>{' '}
         <div className={styles.project}>
           <div className={styles.projectImg}>
             <img src={Image1} alt='imageP' className={styles.projectImage} />
@@ -83,6 +48,41 @@ function FeaturedProjects() {
               <a
                 href='https://vidly-10b0b.firebaseapp.com/
               '
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaShareSquare className={styles.projectIcon} />
+              </a>
+            </div>
+          </div>
+        </div>{' '}
+        <div className={styles.project}>
+          <div className={styles.projectImg}>
+            <img src={Image} alt='imageP' className={styles.projectImage} />
+          </div>
+
+          <div data-aos='flip-up' className={styles.projectInfo}>
+            <span className={styles.projectNumber}>0</span>
+            <h3>React Ecommerce Project</h3>
+            <p className={styles.projectDesc}>
+              A simple ecommerce project which uses the basic concept of react
+              and react-router. The paypal system has also been integrated with
+              the deduction of amout according to the cart total.
+            </p>
+            <div className={styles.projectStack}>
+              <span>Redux</span>
+              <span>React-Router</span>
+            </div>
+            <div className={styles.projectLinks}>
+              <a
+                href='https://github.com/greatshah222/Ecommerce_React '
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaGithubSquare className={styles.projectIcon} />
+              </a>
+              <a
+                href='https://react-ecommerce-shah-bishal.netlify.app/'
                 target='_blank'
                 rel='noopener noreferrer'
               >

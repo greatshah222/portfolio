@@ -1,19 +1,74 @@
-.profile:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 0.25rem solid var(--mainYellow);
-  top: 2rem;
-  right: -2rem;
-  border-radius: 5px;
-  z-index: -1;
-}
-.profile {
-  height: 300px;
-  width: 300px;
-  margin: 20px auto;
+.SecondaryContainer {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
+  /* padding: 3rem; */
+
+  align-items: center;
+
+  position: relative;
+}
+.MainContainer {
+  background-color: var(--mainHover);
+  padding-bottom: 2rem;
+}
+.TextContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
   position: relative;
   z-index: 1;
+
+  flex: 1;
+  height: 100%;
+}
+.profileImage {
+  object-fit: cover;
+  width: 70%;
+  height: 100%;
+}
+
+.projectStack {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.projectStack span {
+  display: inline-block;
+  background: var(--lightGrey);
+  color: var(--darkGrey);
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.textInfo {
+  line-height: 2;
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
+}
+@media (max-width: 1024px) {
+  .SecondaryContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .TextContainer {
+    margin-top: 50px;
+  }
+  /* .profileImage {
+    max-height: 80vh;
+    max-width: 50vw;
+  } */
+  .profile {
+    align-self: center;
+    margin: auto;
+    width: 60%;
+    margin-right: 10%;
+  }
 }

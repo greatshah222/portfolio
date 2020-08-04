@@ -35,8 +35,44 @@ function Input(props) {
     });
   };
 
-  const content =
-    props.elements === 'input' ? (
+  let content;
+
+  if (props.inputType === 'footer' && props.elements === 'input') {
+    content = (
+      <div
+        className={`${classes.formInput} ${
+          !isValid && isTouched && classes.formInputInvalid
+        } `}
+      >
+        <input
+          id={props.id}
+          type={props.type}
+          placeholder={props.placeholder}
+          onChange={changeHandler}
+          onBlur={touchedHandler}
+          value={value}
+        />
+      </div>
+    );
+  } else if (props.inputType === 'footer' && props.elements !== 'input') {
+    content = (
+      <div
+        className={`${classes.formInput} ${
+          !isValid && isTouched && classes.formInputInvalid
+        } `}
+      >
+        <textarea
+          id={props.id}
+          onChange={changeHandler}
+          onBlur={touchedHandler}
+          value={value}
+          rows={props.rows || 3}
+          placeholder={props.placeholder}
+        />
+      </div>
+    );
+  } else if (props.elements === 'input') {
+    content = (
       <div
         className={`${classes.formInput} ${
           !isValid && isTouched && classes.formInputInvalid
@@ -52,7 +88,9 @@ function Input(props) {
           value={value}
         />
       </div>
-    ) : (
+    );
+  } else {
+    content = (
       <div
         className={`${classes.formInput} ${
           !isValid && isTouched && classes.formInputInvalid
@@ -69,6 +107,42 @@ function Input(props) {
         />
       </div>
     );
+  }
+
+  // content =
+  //   props.elements === 'input' ? (
+  //     <div
+  //       className={`${classes.formInput} ${
+  //         !isValid && isTouched && classes.formInputInvalid
+  //       } `}
+  //     >
+  //       <FontAwesomeIcon icon={props.iconName} className={classes.iconColor} />
+  //       <input
+  //         id={props.id}
+  //         type={props.type}
+  //         placeholder={props.placeholder}
+  //         onChange={changeHandler}
+  //         onBlur={touchedHandler}
+  //         value={value}
+  //       />
+  //     </div>
+  //   ) : (
+  //     <div
+  //       className={`${classes.formInput} ${
+  //         !isValid && isTouched && classes.formInputInvalid
+  //       } `}
+  //     >
+  //       <FontAwesomeIcon icon={props.iconName} className={classes.iconColor} />
+  //       <textarea
+  //         id={props.id}
+  //         onChange={changeHandler}
+  //         onBlur={touchedHandler}
+  //         value={value}
+  //         rows={props.rows || 3}
+  //         placeholder={props.placeholder}
+  //       />
+  //     </div>
+  //   );
   return (
     <>
       {content}

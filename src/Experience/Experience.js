@@ -467,11 +467,14 @@ function Experience() {
       </div>
     );
 
-    AOS.init({ duration: 5000 });
+    AOS.init({ duration: 500 });
   }, []);
   if (!contenttext) {
     return <p>Loading....</p>;
   }
+  const setContextHandler = (value) => {
+    setcontentText(value);
+  };
   return (
     contenttext && (
       <section className={classes.Experience}>
@@ -482,7 +485,7 @@ function Experience() {
             <NavLink
               to='/'
               exact
-              onClick={() => setcontentText(contentEducation)}
+              onClick={() => setContextHandler(contentEducation)}
               activeClassName={classes.active}
             >
               Education
@@ -491,7 +494,7 @@ function Experience() {
             <NavLink
               exact
               to='/experience'
-              onClick={() => setcontentText(contentExperience)}
+              onClick={() => setContextHandler(contentExperience)}
               activeClassName={classes.active}
             >
               Experience

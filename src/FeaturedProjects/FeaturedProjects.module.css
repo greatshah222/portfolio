@@ -2,6 +2,7 @@
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
+  overflow-x: hidden;
 }
 .backgroundColorPrimary {
   background: var(--mainHover);
@@ -110,6 +111,17 @@
   }
   .projectImage {
     height: 22rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .projectImg {
+    height: 19rem;
+  }
+  .projectImage {
+    height: 19rem;
+  }
+  .project {
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 992px) {

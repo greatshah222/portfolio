@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from '../Shared/Hooks/UseForm';
 import classes from '../Shared/Input/Input.module.css';
-import logocontact from '../Assets/Images/logo_sign.svg';
+import logocontact from '../Assets/Images/contact.svg';
 import Input from '../Shared/Input/Input';
 import {
   VALIDATOR_EMAIL,

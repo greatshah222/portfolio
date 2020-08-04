@@ -14,7 +14,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Footer() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 5000 });
+
     console.log('object');
   }, []);
   return (
@@ -23,7 +24,7 @@ function Footer() {
         <div className={classes.SecondaryContainer}>
           <h6>I'am available for freelance projects.</h6>
           <h3>Let's work together indeed!</h3>
-          <div data-aos='fade-down-right' className={classes.ButtonsSection}>
+          <div data-aos='fade-  -right' className={classes.ButtonsSection}>
             <Button
               style={{
                 backgroundColor: 'var(--lightYellow)',
@@ -96,7 +97,7 @@ function Footer() {
               <h5>great.shah222@gmail.com</h5>
             </div>
           </div>
-          <div data-aos='fade-left' className={classes.Contactme}>
+          <div data-aos='fade-up-left' className={classes.Contactme}>
             <h4 className={classes.heading}>Contact Me</h4>
             <form className={classes.FooterForm}>
               <input type='text' placeholder='Enter your Email' />
