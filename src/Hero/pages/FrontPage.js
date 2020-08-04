@@ -1,7 +1,7 @@
 import React from 'react';
 import profile from '../../Assets/Images/hero-img.jpeg';
-import classes from './FrontPage.module.css';
 import { Link } from 'react-router-dom';
+import classes from './FrontPage.module.css';
 
 import {
   FaFacebookSquare,
@@ -10,6 +10,7 @@ import {
   FaTwitter,
 } from 'react-icons/fa';
 import Button from '../../Shared/Button/Button';
+import { Animated } from 'react-animated-css';
 
 function FrontPage() {
   return (
@@ -37,8 +38,15 @@ function FrontPage() {
             </Link>
           </div>
         </div>
+
         <div className={classes.profile}>
-          <img src={profile} alt='profile' />
+          <Animated
+            animationIn='bounceInLeft'
+            animationOut='fadeOut'
+            isVisible={true}
+          >
+            <img src={profile} alt='profile' className={classes.profileImage} />
+          </Animated>
         </div>
       </div>
       {/* <div className={classes.stars}></div>

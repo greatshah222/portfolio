@@ -1,18 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Experience.module.css';
 import Button from '../Shared/Button/Button';
 import { FaServicestack, FaCertificate, FaLink } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Experience() {
-  let contentEducation;
-  let contentExperience;
-  let contentThesis;
-  let contentCertificate;
-
-  const [contenttext, setcontentText] = useState('');
-  contentExperience = (
-    <div className={classes.ExperienceInfo}>
+  const [contenttext, setcontentText] = useState();
+  const contentExperience = (
+    <div data-aos='fade-up-left' className={classes.ExperienceInfo}>
       <div className={classes.title}>Full Stack Web Developer</div>
       <div className={classes.tag}>Village Dev helping Organization</div>
       <div className={classes.TimePeriod}> May 2018- May 2019</div>
@@ -77,8 +74,8 @@ function Experience() {
       </div>
     </div>
   );
-  contentThesis = (
-    <div className={classes.ExperienceInfo}>
+  const contentThesis = (
+    <div data-aos='fade-up-right' className={classes.ExperienceInfo}>
       <div className={classes.title}>Bachelor's Thesis</div>
       <div className={classes.tags}>
         <div className={classes.tag}>
@@ -132,8 +129,112 @@ function Experience() {
       </div>
     </div>
   );
+
+  const contentCertificate = (
+    <div data-aos='fade-up' className={classes.ExperienceInfo}>
+      <div className={classes.title}>Online Course Certificates</div>
+      <div className={classes.tags}>
+        {' '}
+        <div className={classes.tag}>Udemy</div>
+        <div className={classes.tag}>PRogramming with mosh</div>
+      </div>
+
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+
+        <div className={classes.text}>
+          React - The Complete Guide (incl Hooks, React Router, Redux)
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+        <div className={classes.text}>
+          The Complete JavaScript Course 2020: Build Real Projects!
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+        <div className={classes.text}>
+          The Web Developer Bootcamp by Colt Steele{' '}
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+        <div className={classes.text}>
+          Laravel 2019, the complete guide by kati Frantz{' '}
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+        <div className={classes.text}>
+          Forum App with Pusher Laravel & vuejs by Sarthak Shrivastava{' '}
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+        <div className={classes.text}>
+          Mastering React by Mosh Hamedani{' '}
+          <a
+            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>{' '}
+        </div>
+      </div>
+    </div>
+  );
+  let contentEducation;
   contentEducation = (
-    <div className={classes.ExperienceInfo}>
+    <div data-aos='fade-right' className={classes.ExperienceInfo}>
       <div className={classes.title}>Engineering in Information Technology</div>
       <div className={classes.tag}>Oulu university of applied science</div>
       <div className={classes.TimePeriod}> August 2015- August 2019</div>
@@ -246,163 +347,183 @@ function Experience() {
       </div>
     </div>
   );
-  contentCertificate = (
-    <div className={classes.ExperienceInfo}>
-      <div className={classes.title}>Online Course Certificates</div>
-      <div className={classes.tags}>
-        {' '}
-        <div className={classes.tag}>Udemy</div>
-        <div className={classes.tag}>PRogramming with mosh</div>
-      </div>
-
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          React - The Complete Guide (incl Hooks, React Router, Redux)
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>
-        </div>
-      </div>
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          The Complete JavaScript Course 2020: Build Real Projects!
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>
-        </div>
-      </div>
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          The Web Developer Bootcamp by Colt Steele{' '}
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>
-        </div>
-      </div>
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          Laravel 2019, the complete guide by kati Frantz{' '}
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>
-        </div>
-      </div>
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          Forum App with Pusher Laravel & vuejs by Sarthak Shrivastava{' '}
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>
-        </div>
-      </div>
-      <div className={classes.textPrimary}>
-        <div className={classes.icon}>
-          <FaCertificate className={classes.socialIcon} />
-        </div>
-        <div className={classes.text}>
-          Mastering React by Mosh Hamedani{' '}
-          <a
-            href='https://www.udemy.com/certificate/UC-03424575-82cc-4219-b94d-44b22aefda33/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaLink />
-          </a>{' '}
-        </div>
-      </div>
-    </div>
-  );
-  const contentEducationHandler = useCallback(() => {
-    setcontentText(contentEducation);
-  }, []);
   useEffect(() => {
-    contentEducationHandler();
-  }, [contentEducationHandler]);
-  console.log('object');
-  return (
-    <section className={classes.Experience}>
-      <h2>Experience & Education</h2>
-
-      <div className={classes.ExperiencePrimary}>
-        <div className={classes.ExperienceLinks}>
-          <NavLink
-            to='/education'
-            exact
-            onClick={() => setcontentText(contentEducation)}
-            activeClassName={classes.active}
-          >
-            Education
-          </NavLink>
-
-          <NavLink
-            exact
-            to='/experience'
-            onClick={() => setcontentText(contentExperience)}
-            activeClassName={classes.active}
-          >
-            Experience
-          </NavLink>
-          <NavLink
-            exact
-            to='/certificate'
-            onClick={() => setcontentText(contentCertificate)}
-            activeClassName={classes.active}
-          >
-            Certificate
-          </NavLink>
-          <NavLink
-            exact
-            to='/thesis'
-            onClick={() => setcontentText(contentThesis)}
-            activeClassName={classes.active}
-          >
-            Thesis
-          </NavLink>
+    setcontentText(
+      <div data-aos='fade-right' className={classes.ExperienceInfo}>
+        <div className={classes.title}>
+          Engineering in Information Technology
         </div>
-        {contenttext}
+        <div className={classes.tag}>Oulu university of applied science</div>
+        <div className={classes.TimePeriod}> August 2015- August 2019</div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Knowledge of Markup language along with Javascript, Php, Laravel,
+            Express, ,CodeIgniter, React and Node JS.
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Software processes and activities at different phases using
+            different tools
+          </div>
+        </div>{' '}
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Ability to analyze testing sessions and write usability reports
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Advanced web and mobile application
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Solving problems in object-oriented style.
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>Modern cloud service techniques</div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Agile methods and tools in mobile software and product development
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Business models in the mobile application business
+          </div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>Overview if IoT solutions</div>
+        </div>
+        <div className={classes.textPrimary}>
+          <div className={classes.icon}>
+            <FaServicestack
+              className={classes.socialIcon}
+              color='var(--darkBlue)'
+            />
+          </div>
+          <div className={classes.text}>
+            Knowledge of both structured (Sql) and non-structured (MongoDB)
+            Database
+          </div>
+        </div>
       </div>
-      <div className={classes.moreInfo}>
-        {' '}
-        <Button btnType='hire' style={{ padding: '10px 35px' }}>
-          More Info
-        </Button>
-      </div>
-    </section>
+    );
+
+    AOS.init({ duration: 5000 });
+  }, []);
+  if (!contenttext) {
+    return <p>Loading....</p>;
+  }
+  return (
+    contenttext && (
+      <section className={classes.Experience}>
+        <h2>Experience & Education</h2>
+
+        <div className={classes.ExperiencePrimary}>
+          <div className={classes.ExperienceLinks}>
+            <NavLink
+              to='/'
+              exact
+              onClick={() => setcontentText(contentEducation)}
+              activeClassName={classes.active}
+            >
+              Education
+            </NavLink>
+
+            <NavLink
+              exact
+              to='/experience'
+              onClick={() => setcontentText(contentExperience)}
+              activeClassName={classes.active}
+            >
+              Experience
+            </NavLink>
+            <NavLink
+              exact
+              to='/certificate'
+              onClick={() => setcontentText(contentCertificate)}
+              activeClassName={classes.active}
+            >
+              Certificate
+            </NavLink>
+            <NavLink
+              exact
+              to='/thesis'
+              onClick={() => setcontentText(contentThesis)}
+              activeClassName={classes.active}
+            >
+              Thesis
+            </NavLink>
+          </div>
+
+          {contenttext}
+        </div>
+        <div className={classes.moreInfo}>
+          {' '}
+          <Button btnType='hire' style={{ padding: '10px 35px' }}>
+            More Info
+          </Button>
+        </div>
+      </section>
+    )
   );
 }
 
