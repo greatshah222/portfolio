@@ -17,6 +17,9 @@ h2 {
   background-color: var(--mainHover);
   padding-bottom: 50px;
 }
+.info {
+  line-height: 2;
+}
 .Services h2:after,
 h2::after {
   content: '';
@@ -38,6 +41,7 @@ h2::after {
   align-items: center;
   border-radius: 25px;
   cursor: pointer;
+  min-height: 60vh;
 }
 .ServicesSecondary:hover {
   background-color: var(--darkBlue);

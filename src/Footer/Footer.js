@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../Shared/Button/Button';
 import classes from './Footer.module.css';
 import {
@@ -12,30 +12,53 @@ import {
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Footer() {
   useEffect(() => {
     AOS.init({ duration: 5000 });
 
     console.log('object');
   }, []);
+  const [Email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const EmailChangehandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const MessageChangehandler = (e) => {
+    setMessage(e.target.value);
+  };
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    console.log(Email, message);
+    setMessage('');
+    setEmail('');
+    toast.success('Thankyou for your message.');
+  };
   return (
     <>
       <section className={classes.FreelanceImageContainer}>
+        <ToastContainer />
         <div className={classes.SecondaryContainer}>
           <h6>I'am available for freelance projects.</h6>
           <h3>Let's work together indeed!</h3>
-          <div data-aos='fade-  -right' className={classes.ButtonsSection}>
+          <div data-aos='fade-right' className={classes.ButtonsSection}>
             <Button
               style={{
                 backgroundColor: 'var(--lightYellow)',
                 color: 'var(--mainBlack) ',
                 padding: '10px 35px',
               }}
-              to='/'
+              to='/contactme'
             >
               Get quotes
             </Button>
-            <Button btnType='hire' style={{ padding: '10px 35px' }} to='/'>
+            <Button
+              btnType='hire'
+              style={{ padding: '10px 35px' }}
+              to='/contactme'
+            >
               Hire Me
             </Button>
           </div>
@@ -46,9 +69,8 @@ function Footer() {
           <div data-aos='fade-up-right' className={classes.Aboutme}>
             <h4 className={classes.heading}>About Me</h4>
             <div className={classes.AboutmeInfo}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ab.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ab.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ab.
+              Hello, I am Bishal Shah and I am a Full Stack Web Developer. I
+              enjoy coding and the challenge of learning something new everyday.
             </div>
             <div className={classes.AboutmeIcon}>
               <a
@@ -73,7 +95,7 @@ function Footer() {
                 <FaTwitter className={classes.socialIcon} />
               </a>
               <a
-                href='https://github.com/greatshah222'
+                href='https://www.linkedin.com/in/bishal-shah-8b7822159/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -99,9 +121,21 @@ function Footer() {
           </div>
           <div data-aos='fade-up-left' className={classes.Contactme}>
             <h4 className={classes.heading}>Contact Me</h4>
-            <form className={classes.FooterForm}>
-              <input type='text' placeholder='Enter your Email' />
-              <input type='text' placeholder='Enter your Message' />
+            <form className={classes.FooterForm} onSubmit={formSubmitHandler}>
+              <input
+                type='email'
+                placeholder='Enter your Email'
+                value={Email}
+                onChange={EmailChangehandler}
+                required
+              />
+              <input
+                type='text'
+                placeholder='Enter your Message'
+                value={message}
+                onChange={MessageChangehandler}
+                required
+              />
               <Button btnType='hire'>Send</Button>
             </form>
           </div>

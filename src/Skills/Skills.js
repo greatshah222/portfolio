@@ -24,24 +24,24 @@ function Skills() {
       <div className={classes.Skills}>
         <div data-aos='fade-right' className={classes.SkillsPrimary}>
           <h4>HTML5 </h4> <FaHtml5 className={classes.socialIcon} />
-          <ProgressBar width='100' className={classes.ProgressBar} />
+          <ProgressBar width='90' className={classes.ProgressBar} />
         </div>
         <div data-aos='fade-left' className={classes.SkillsPrimary}>
           <h4>CSS3 </h4>
           <FaCss3 className={classes.socialIcon} />
-          <ProgressBar width='100' className={classes.ProgressBar} />
+          <ProgressBar width='90' className={classes.ProgressBar} />
         </div>
         <div data-aos='fade-right' className={classes.SkillsPrimary}>
           <h4>React </h4>
           <FaReact className={classes.socialIcon} />
 
-          <ProgressBar width='95' className={classes.ProgressBar} />
+          <ProgressBar width='90' className={classes.ProgressBar} />
         </div>
         <div data-aos='fade-left' className={classes.SkillsPrimary}>
           <h4>React-Router </h4>
           <FaReact className={classes.socialIcon} />
 
-          <ProgressBar width='95' className={classes.ProgressBar} />
+          <ProgressBar width='90' className={classes.ProgressBar} />
         </div>
         <div data-aos='fade-right' className={classes.SkillsPrimary}>
           <h4>Node</h4>
@@ -81,7 +81,7 @@ function Skills() {
           <h4>JavaScript</h4>
           <FaCode className={classes.socialIcon} />
 
-          <ProgressBar width='80' className={classes.ProgressBar} />
+          <ProgressBar width='95' className={classes.ProgressBar} />
         </div>
       </div>
     </div>

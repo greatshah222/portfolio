@@ -1,4 +1,4 @@
-.SecondaryContainer {
+.SecondaryContainer1 {
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -7,10 +7,11 @@
   align-items: center;
 
   position: relative;
+  overflow-x: visible;
 }
-.MainContainer {
+.MainContainer1 {
   background-color: var(--mainHover);
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 .TextContainer {
   flex: 2;
@@ -19,17 +20,31 @@
   align-items: center;
 }
 
-.profile {
+.profile1 {
   position: relative;
   z-index: 1;
 
   flex: 1;
-  height: 100%;
+  /* margin-top: 50px; */
+  overflow-x: visible;
+  /* overflow: hidden; */
 }
-.profileImage {
-  object-fit: cover;
+.profileImage1 {
+  /* object-fit: cover; */
+  width: 70%;
+}
+.profile1:before {
+  content: '';
+  position: absolute;
   width: 70%;
   height: 100%;
+
+  border: 0.2rem solid var(--darkBlue);
+  top: 2rem;
+
+  right: 6rem;
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .projectStack {
@@ -54,21 +69,22 @@
   color: var(--clr-grey-3);
 }
 @media (max-width: 1024px) {
-  .SecondaryContainer {
+  .SecondaryContainer1 {
     flex-direction: column;
     align-items: center;
   }
   .TextContainer {
     margin-top: 50px;
   }
-  /* .profileImage {
-    max-height: 80vh;
-    max-width: 50vw;
-  } */
-  .profile {
+  .profileImage1 {
+    max-height: 50vh;
+  }
+  .profile1 {
+    overflow: hidden;
     align-self: center;
     margin: auto;
-    width: 60%;
+    width: 55%;
     margin-right: 10%;
+    max-height: 50vh;
   }
 }

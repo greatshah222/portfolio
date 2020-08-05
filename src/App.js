@@ -25,7 +25,7 @@ function App() {
         <Route path='/projects'>
           <Project />
         </Route>
-        <Route path='/'>
+        <Route path='/:url?'>
           <MainPage />
         </Route>
       </Switch>

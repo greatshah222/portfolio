@@ -20,28 +20,48 @@ function FrontPage() {
           {' '}
           <h2>I'm Bishal</h2>
           <p>Freelance Fullstack Developer</p>
-          <Button btnType='hire' to='/'>
-            Contact me
+          <Button btnType='hire' to='/contactme'>
+            Start a Conversation
           </Button>
           <div className={classes.footer}>
-            <Link to='/'>
+            <a
+              href='https://www.facebook.com/Bishalshah22'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {' '}
               <FaFacebookSquare className={classes.socialIcon} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://github.com/greatshah222'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {' '}
               <FaGithubSquare className={classes.socialIcon} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://github.com/greatshah222'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {' '}
               <FaTwitter className={classes.socialIcon} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://www.linkedin.com/in/bishal-shah-8b7822159/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {' '}
               <FaLinkedin className={classes.socialIcon} />
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className={classes.profile}>
           <Animated
-            animationIn='bounceInLeft'
+            animationIn='fadeInRight'
             animationOut='fadeOut'
             isVisible={true}
           >

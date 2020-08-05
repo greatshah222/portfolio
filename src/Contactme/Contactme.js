@@ -8,6 +8,8 @@ import {
   VALIDATOR_REQUIRE,
 } from '../Shared/Validation/Validator';
 import Button from '../Shared/Button/Button';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Contactme() {
   const [state, InputHandler] = useForm(
     {
@@ -22,7 +24,10 @@ function Contactme() {
     },
     false
   );
-  const formSubmitHandler = () => {};
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    toast.success('Thankyou for the Message');
+  };
   return (
     <div className={classes.formPrimary}>
       <div className={classes.formSecondary}>

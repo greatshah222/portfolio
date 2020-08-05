@@ -18,9 +18,11 @@
 
   flex: 1;
   margin-top: 50px;
+  overflow-x: visible;
+  /* overflow: hidden; */
 }
 .profileImage {
-  object-fit: cover;
+  /* object-fit: cover; */
   width: 70%;
 }
 .profile:before {
@@ -51,18 +53,7 @@
 .info h2 {
   font-size: 3rem;
 }
-.info h2:before {
-  content: '';
-  width: 120px;
-  height: 4px;
-  top: -1rem;
-  display: block;
-  background-color: var(--darkBlue);
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
+/*  */
 .info p {
   font-size: 1rem;
 }
