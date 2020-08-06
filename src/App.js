@@ -10,7 +10,6 @@ import Contactme from './Contactme/Contactme';
 import Project from './Projects/Project';
 import Footer from './Footer/Footer';
 import Navigations from './Shared/Navigation/Navigations/Navigations';
-import Pract from './Pract/Pract';
 
 function App() {
   return (
@@ -26,9 +25,6 @@ function App() {
         </Route>
         <Route path='/v1/projects'>
           <Project />
-        </Route>
-        <Route path='/v1/lend'>
-          <Pract />
         </Route>
 
         <Route path='/:url?' exact>
