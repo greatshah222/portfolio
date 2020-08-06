@@ -14,7 +14,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router-dom';
 function Contactme() {
   console.log(process.env.REACT_APP_BACKEND_URL);
-  console.log(process.env);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [state, InputHandler] = useForm(
@@ -33,7 +32,6 @@ function Contactme() {
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(process.env.REACT_APP_BACKEND_URL);
 
     try {
       await axios({

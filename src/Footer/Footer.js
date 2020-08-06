@@ -39,7 +39,7 @@ function Footer() {
           email: Email,
           message: message,
         },
-        url: 'http://localhost:8000/api/v1/email',
+        url: `${process.env.REACT_APP_BACKEND_URL}/email`,
       });
       setMessage('');
       setEmail('');
