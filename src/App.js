@@ -10,25 +10,32 @@ import Contactme from './Contactme/Contactme';
 import Project from './Projects/Project';
 import Footer from './Footer/Footer';
 import Navigations from './Shared/Navigation/Navigations/Navigations';
+import Pract from './Pract/Pract';
 
 function App() {
   return (
     <>
       <Navigations />
+
       <Switch>
-        <Route path='/about'>
+        <Route path='/v1/about'>
           <About />
         </Route>
-        <Route path='/contactme'>
+        <Route path='/v1/contactme'>
           <Contactme />
         </Route>
-        <Route path='/projects'>
+        <Route path='/v1/projects'>
           <Project />
         </Route>
-        <Route path='/:url?'>
+        <Route path='/v1/lend'>
+          <Pract />
+        </Route>
+
+        <Route path='/:url?' exact>
           <MainPage />
         </Route>
       </Switch>
+
       <Footer />
     </>
   );

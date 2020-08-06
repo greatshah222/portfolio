@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './About.module.css';
 import { Animated } from 'react-animated-css';
-import profile from '../Assets/Images/hero-img.jpeg';
+import profile from '../Assets/Images/IMG_3818-removebg-preview (2).png';
 
 function About() {
   return (

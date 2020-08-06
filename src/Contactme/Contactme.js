@@ -1,33 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from '../Shared/Hooks/UseForm';
 import classes from '../Shared/Input/Input.module.css';
 import logocontact from '../Assets/Images/contact.svg';
 import Input from '../Shared/Input/Input';
+import axios from 'axios';
 import {
   VALIDATOR_EMAIL,
   VALIDATOR_REQUIRE,
 } from '../Shared/Validation/Validator';
 import Button from '../Shared/Button/Button';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useHistory } from 'react-router-dom';
 function Contactme() {
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
   const [state, InputHandler] = useForm(
     {
-      Email: {
+      email: {
         value: '',
         isValid: false,
       },
-      Message: {
+      message: {
         value: '',
         isValid: false,
       },
     },
     false
   );
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
-    toast.success('Thankyou for the Message');
+    setLoading(true);
+
+    try {
+      await axios({
+        method: 'POST',
+        data: {
+          email: state.inputs.email.value,
+          message: state.inputs.message.value,
+        },
+        url: 'http://localhost:8000/api/v1/email',
+      });
+
+      await toast.success('Thankyou for the Message');
+      setLoading(false);
+      history.push('/');
+    } catch (error) {
+      await toast.error(error.response.data.error.response);
+      console.log(error.response.data.error.response);
+      setLoading(false);
+    }
   };
+
   return (
     <div className={classes.formPrimary}>
       <div className={classes.formSecondary}>
@@ -37,7 +61,7 @@ function Contactme() {
           {/* // formheader for line after h2 and font size */}
           <h2 className={classes.formHeader}>Contact Me</h2>
           <Input
-            id='Email'
+            id='email'
             label='EMAIL'
             placeholder='Enter Your Email'
             type='text'
@@ -48,7 +72,7 @@ function Contactme() {
             onInput={InputHandler}
           />{' '}
           <Input
-            id='Message'
+            id='message'
             label='Message'
             placeholder='Enter Your Message'
             type='text'
@@ -58,8 +82,8 @@ function Contactme() {
             validators={[VALIDATOR_REQUIRE()]}
             onInput={InputHandler}
           />
-          <Button btnType='login' disabled={!state.isValid}>
-            Send
+          <Button btnType='login' disabled={!state.isValid || loading}>
+            {loading ? 'Sending....' : 'Send'}
           </Button>
           <hr style={{ marginTop: '40px' }} />
         </form>

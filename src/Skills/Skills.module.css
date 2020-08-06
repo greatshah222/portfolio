@@ -15,6 +15,7 @@
 .SkillsPrimary {
   display: flex;
   align-items: center;
+  font-family: var(--ff-secondary);
 }
 .SkillsPrimary .socialIcon {
   margin-right: 20px;

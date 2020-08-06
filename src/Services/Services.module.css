@@ -12,6 +12,7 @@ h2 {
   text-align: center;
   font-size: 2rem;
   padding: 50px 0;
+  font-family: var(--ff-primary);
 }
 .Services {
   background-color: var(--mainHover);
@@ -53,6 +54,8 @@ h2::after {
 }
 .ServicesSecondary p {
   padding: 3rem;
+  font-family: var(--ff-secondary);
+  font-style: italic;
 }
 .underline {
   width: 50px;

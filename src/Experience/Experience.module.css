@@ -24,10 +24,14 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  font-family: var(--ff-primary);
 }
 .ExperienceInfo > * {
   padding: 0.6rem;
 }
+
 .ExperienceLinks a {
   padding: 10px 25px;
   font-size: 120%;
@@ -75,10 +79,7 @@
   font-weight: 600;
   color: var(--icon);
 }
-.moreInfo {
-  text-align: center;
-  margin: 30px 0;
-}
+
 .textPrimary {
   display: grid;
   grid-template-columns: 20px 98%;
@@ -91,6 +92,7 @@
   font-size: 1.1rem;
   width: 90%;
   margin: auto;
+  font-family: var(--ff-secondary);
 }
 .text a {
   margin-left: 20px;

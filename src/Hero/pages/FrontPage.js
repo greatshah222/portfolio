@@ -1,6 +1,5 @@
 import React from 'react';
-import profile from '../../Assets/Images/hero-img.jpeg';
-import { Link } from 'react-router-dom';
+import profile from '../../Assets/Images/code4.svg';
 import classes from './FrontPage.module.css';
 
 import {
@@ -20,7 +19,7 @@ function FrontPage() {
           {' '}
           <h2>I'm Bishal</h2>
           <p>Freelance Fullstack Developer</p>
-          <Button btnType='hire' to='/contactme'>
+          <Button btnType='hire' to='/v1/contactme'>
             Start a Conversation
           </Button>
           <div className={classes.footer}>
@@ -69,9 +68,9 @@ function FrontPage() {
           </Animated>
         </div>
       </div>
-      {/* <div className={classes.stars}></div>
+      <div className={classes.stars}></div>
       <div className={classes.stars2}></div>
-      <div className={classes.stars3}></div> */}
+      <div className={classes.stars3}></div>
     </section>
   );
 }

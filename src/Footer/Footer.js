@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Shared/Button/Button';
 import classes from './Footer.module.css';
+import axios from 'axios';
 import {
   FaFacebook,
   FaLinkedin,
@@ -17,24 +18,38 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Footer() {
   useEffect(() => {
-    AOS.init({ duration: 5000 });
-
-    console.log('object');
+    AOS.init({ duration: 3000 });
   }, []);
   const [Email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const EmailChangehandler = (e) => {
     setEmail(e.target.value);
   };
   const MessageChangehandler = (e) => {
     setMessage(e.target.value);
   };
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
-    console.log(Email, message);
-    setMessage('');
-    setEmail('');
-    toast.success('Thankyou for your message.');
+    setLoading(true);
+    try {
+      await axios({
+        method: 'POST',
+        data: {
+          email: Email,
+          message: message,
+        },
+        url: 'http://localhost:8000/api/v1/email',
+      });
+      setMessage('');
+      setEmail('');
+      await toast.success('Thankyou for the Message');
+      setLoading(false);
+    } catch (error) {
+      await toast.error(error.response.data.error.response);
+      console.log(error.response.data.error.response);
+      setLoading(false);
+    }
   };
   return (
     <>
@@ -50,14 +65,14 @@ function Footer() {
                 color: 'var(--mainBlack) ',
                 padding: '10px 35px',
               }}
-              to='/contactme'
+              to='/v1/contactme'
             >
               Get quotes
             </Button>
             <Button
               btnType='hire'
               style={{ padding: '10px 35px' }}
-              to='/contactme'
+              to='/v1/contactme'
             >
               Hire Me
             </Button>
@@ -74,7 +89,7 @@ function Footer() {
             </div>
             <div className={classes.AboutmeIcon}>
               <a
-                href='https://github.com/greatshah222'
+                href='https://www.facebook.com/Bishalshah22'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -136,7 +151,9 @@ function Footer() {
                 onChange={MessageChangehandler}
                 required
               />
-              <Button btnType='hire'>Send</Button>
+              <Button btnType='hire' disabled={loading}>
+                {loading ? 'Sending' : 'Send'}
+              </Button>
             </form>
           </div>
         </div>

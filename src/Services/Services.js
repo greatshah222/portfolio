@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 function Services() {
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 2000 });
   }, []);
   return (
     <section className={classes.Services}>

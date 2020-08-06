@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Experience.module.css';
-import Button from '../Shared/Button/Button';
 import { FaServicestack, FaCertificate, FaLink } from 'react-icons/fa';
 import { NavLink, useParams } from 'react-router-dom';
 import AOS from 'aos';
@@ -362,7 +361,7 @@ function Experience() {
       setcontentText(contentThesis);
     }
 
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 3000 });
   }, [url]);
   if (!contenttext) {
     return <p>Loading....</p>;
@@ -413,12 +412,6 @@ function Experience() {
           </div>
 
           {contenttext}
-        </div>
-        <div className={classes.moreInfo}>
-          {' '}
-          <Button btnType='hire' style={{ padding: '10px 35px' }}>
-            More Info
-          </Button>
         </div>
       </section>
     )

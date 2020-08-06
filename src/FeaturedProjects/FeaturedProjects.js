@@ -9,7 +9,7 @@ import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
 
 function FeaturedProjects() {
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 2000 });
   }, []);
   return (
     <div className={styles.backgroundColorPrimary}>

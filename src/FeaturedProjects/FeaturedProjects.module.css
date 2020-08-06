@@ -67,6 +67,7 @@
 .projectDesc {
   word-spacing: 15px;
   color: var(--clr-grey-3);
+  font-family: var(--ff-secondary);
 }
 .projectStack {
   margin-bottom: 1rem;

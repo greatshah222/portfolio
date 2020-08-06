@@ -21,9 +21,12 @@
   font-size: 18px;
   line-height: 26px;
   padding: 3rem;
+  font-family: var(--ff-secondary);
+  font-style: italic;
 }
 .AboutmeInfo {
   line-height: 1.8;
+  font-family: var(--ff-secondary);
 }
 .SecondaryContainer h3 {
   color: #fff;
@@ -64,7 +67,7 @@
 /* // actual footer */
 .Footerprimary {
   padding: 2rem 1rem;
-  background: var(--mainBlack);
+  background: var(--mainBg);
   color: var(--mainWhite);
 }
 .Footer {
@@ -83,6 +86,7 @@
   min-height: 15vh;
   flex: 1;
   padding: 0 1rem;
+  font-family: var(--ff-secondary);
 }
 .Aboutme > *,
 .Address > *,
