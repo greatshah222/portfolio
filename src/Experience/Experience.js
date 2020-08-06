@@ -8,7 +8,6 @@ import 'aos/dist/aos.css';
 function Experience() {
   const [contenttext, setcontentText] = useState();
   const url = useParams().url;
-  console.log(url);
   const contentExperience = (
     <div data-aos='fade-up-left' className={classes.ExperienceInfo}>
       <div className={classes.title}>Full Stack Web Developer</div>
@@ -362,6 +361,7 @@ function Experience() {
     }
 
     AOS.init({ duration: 3000 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
   if (!contenttext) {
     return <p>Loading....</p>;
