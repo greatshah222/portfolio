@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import SideBar from '../SideBar/SideBar';
 import classes from './Navigations.module.css';
 import Navlinks from '../Navlinks/Navlinks';
-import logo from '../../../Assets/Images/logo.svg';
+import logo from '../../../Assets/Images/Method Draw Image (3).png';
+import logoSideBar from '../../../Assets/Images/Method Draw Image (4).png';
 
 function Navigations() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -14,7 +15,9 @@ function Navigations() {
     <>
       <SideBar show={openSideBar}>
         <div className={classes.headerMobileNav}>
-          <img src={logo} alt='logo' className={classes.logoSideBar} />
+          <div className={classes.logoContainerSideBar}>
+            <img src={logoSideBar} alt='logo' className={classes.logoSideBar} />
+          </div>
           <button
             className={classes.closeSideBarButton}
             onClick={toggleSideBarHandler}
@@ -29,7 +32,9 @@ function Navigations() {
       <>
         <div className={`${classes.mainContaniner}`}>
           <div className={classes.navContainer}>
-            <img src={logo} alt='logo' className={classes.logo} />
+            <div className={classes.logoContainer}>
+              <img src={logo} alt='logo' className={classes.logo} />
+            </div>
             <button
               onClick={toggleSideBarHandler}
               className={classes.HamBurgerMenu}

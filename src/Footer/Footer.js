@@ -18,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Footer() {
   useEffect(() => {
-    AOS.init({ duration: 3000 });
+    AOS.init({ duration: 1000 });
   }, []);
   const [Email, setEmail] = useState('');
   const [message, setMessage] = useState('');

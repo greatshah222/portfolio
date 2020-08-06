@@ -13,6 +13,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router-dom';
 function Contactme() {
+  console.log(process.env.REACT_APP_BACKEND_URL);
+  console.log(process.env);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [state, InputHandler] = useForm(
@@ -31,6 +33,7 @@ function Contactme() {
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
+    console.log(process.env.REACT_APP_BACKEND_URL);
 
     try {
       await axios({
@@ -39,7 +42,7 @@ function Contactme() {
           email: state.inputs.email.value,
           message: state.inputs.message.value,
         },
-        url: 'http://localhost:8000/api/v1/email',
+        url: `${process.env.REACT_APP_BACKEND_URL}/email`,
       });
 
       await toast.success('Thankyou for the Message');

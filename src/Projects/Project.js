@@ -9,7 +9,7 @@ import { Animated } from 'react-animated-css';
 
 function Project() {
   useEffect(() => {
-    AOS.init({ duration: 3000, delay: 50 });
+    AOS.init({ duration: 1000, delay: 50 });
     console.log('clicked');
   }, []);
   return (

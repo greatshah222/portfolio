@@ -360,7 +360,7 @@ function Experience() {
       setcontentText(contentThesis);
     }
 
-    AOS.init({ duration: 3000 });
+    AOS.init({ duration: 1000 });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
   if (!contenttext) {
