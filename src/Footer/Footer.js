@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Button from '../Shared/Button/Button';
 import classes from './Footer.module.css';
 import axios from 'axios';
+import CV from '../Assets/Images/png2pdf.pdf';
 import {
   FaFacebook,
   FaLinkedin,
@@ -65,9 +66,11 @@ function Footer() {
                 color: 'var(--mainBlack) ',
                 padding: '10px 35px',
               }}
-              to='/v1/contactme'
+              href={CV}
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              Get quotes
+              View CV
             </Button>
             <Button
               btnType='hire'

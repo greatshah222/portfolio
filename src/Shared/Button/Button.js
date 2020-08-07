@@ -11,6 +11,10 @@ function Button({
   type,
   onClick,
   style,
+  download,
+  href,
+  target,
+  rel,
 }) {
   if (to) {
     return (
@@ -22,6 +26,20 @@ function Button({
       >
         {children}
       </Link>
+    );
+  }
+  if (href) {
+    return (
+      <a
+        className={`${classes.Button} ${classes[btnType]}`}
+        style={style}
+        href={href}
+        download={download}
+        target={target}
+        rel={rel}
+      >
+        {children}
+      </a>
     );
   }
   return (

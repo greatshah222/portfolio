@@ -13,7 +13,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router-dom';
 function Contactme() {
-  console.log(process.env.REACT_APP_BACKEND_URL);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [state, InputHandler] = useForm(
