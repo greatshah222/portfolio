@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from '../Assets/Images/ecommerce.png';
 import Image1 from '../Assets/Images/ecommerce1.png';
+import Image2 from '../Assets/Images/Screen Shot 2020-08-09 at 5.29.07 AM.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -62,7 +63,7 @@ function FeaturedProjects() {
           </div>
 
           <div data-aos='flip-up' className={styles.projectInfo}>
-            <span className={styles.projectNumber}>0</span>
+            <span className={styles.projectNumber}>2</span>
             <h3>React Ecommerce Project</h3>
             <p className={styles.projectDesc}>
               A simple ecommerce project which uses the basic concept of react
@@ -93,11 +94,11 @@ function FeaturedProjects() {
         </div>{' '}
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <img src={Image} alt='imageP' className={styles.projectImage} />
+            <img src={Image2} alt='imageP' className={styles.projectImage} />
           </div>
 
           <div data-aos='flip-up' className={styles.projectInfo}>
-            <span className={styles.projectNumber}>2</span>
+            <span className={styles.projectNumber}>3</span>
             <h3>MERN Project</h3>
             <p className={styles.projectDesc}>
               This application uses the concept of MERN(MangoDB, express, React

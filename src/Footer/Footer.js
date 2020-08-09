@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Button from '../Shared/Button/Button';
 import classes from './Footer.module.css';
 import axios from 'axios';
-import CV from '../Assets/Images/png2pdf.pdf';
+import CV from '../Assets/Images/NewCvUpdated.pdf';
 import {
   FaFacebook,
   FaLinkedin,

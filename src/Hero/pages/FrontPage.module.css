@@ -36,6 +36,7 @@
   align-items: center;
   flex: 2;
 }
+
 .info h2 {
   font-size: 3rem;
   font-family: var(--ff-primary);

@@ -5,6 +5,8 @@ import styles from '../FeaturedProjects/FeaturedProjects.module.css';
 import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
 import Image1 from '../Assets/Images/ecommerce1.png';
 import Image from '../Assets/Images/ecommerce.png';
+import Image2 from '../Assets/Images/Screen Shot 2020-08-09 at 5.23.56 AM.png';
+import Image3 from '../Assets/Images/Screen Shot 2020-08-09 at 5.29.07 AM.png';
 import { Animated } from 'react-animated-css';
 
 function Project() {
@@ -100,7 +102,7 @@ function Project() {
         </div>{' '}
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <img src={Image} alt='imageP' className={styles.projectImage} />
+            <img src={Image3} alt='imageP' className={styles.projectImage} />
           </div>
 
           <div data-aos='flip-up' className={styles.projectInfo}>
@@ -145,7 +147,7 @@ function Project() {
         </div>{' '}
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <img src={Image} alt='imageP' className={styles.projectImage} />
+            <img src={Image2} alt='imageP' className={styles.projectImage} />
           </div>
 
           <div data-aos='flip-up' className={styles.projectInfo}>
@@ -175,7 +177,7 @@ function Project() {
             </div>
             <div className={styles.projectLinks}>
               <a
-                href='https://github.com/greatshah222/MERNBLOGAugust'
+                href='https://github.com/greatshah222/Blog_Node'
                 target='_blank'
                 rel='noopener noreferrer'
               >
