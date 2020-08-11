@@ -7,12 +7,12 @@ import Image1 from '../Assets/Images/ecommerce1.png';
 import Image from '../Assets/Images/ecommerce.png';
 import Image2 from '../Assets/Images/Screen Shot 2020-08-09 at 5.23.56 AM.png';
 import Image3 from '../Assets/Images/Screen Shot 2020-08-09 at 5.29.07 AM.png';
+import Image5 from '../Assets/Images/Project5.png';
 import { Animated } from 'react-animated-css';
 
 function Project() {
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 50 });
-    console.log('clicked');
   }, []);
   return (
     <div className={styles.backgroundColorPrimary}>
@@ -182,6 +182,45 @@ function Project() {
                 rel='noopener noreferrer'
               >
                 <FaGithubSquare className={styles.projectIcon} />
+              </a>
+            </div>
+          </div>
+        </div>{' '}
+        <div className={styles.project}>
+          <div className={styles.projectImg}>
+            <img src={Image5} alt='imageP' className={styles.projectImage} />
+          </div>
+
+          <div data-aos='flip-right' className={styles.projectInfo}>
+            <span className={styles.projectNumber}>5</span>
+            <h3>Github User Search </h3>
+            <p className={styles.projectDesc}>
+              An application allows users to search and get information about
+              other users top popular langauge , most forked Repos and most star
+              Repo from the Github Api. Fusion chart have been integrated in
+              this application so that the relevant information can be laid more
+              efficiently in term of Pie chart and 3d Column Bar.
+            </p>
+            <div className={styles.projectStack}>
+              <span>React</span>
+              <span>React-Router</span>
+              <span>Github API</span>
+              <span>Fusion Chart</span>
+            </div>
+            <div className={styles.projectLinks}>
+              <a
+                href='https://github.com/greatshah222/github-project'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaGithubSquare className={styles.projectIcon} />
+              </a>
+              <a
+                href='https://githubusersearchh.netlify.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaShareSquare className={styles.projectIcon} />
               </a>
             </div>
           </div>

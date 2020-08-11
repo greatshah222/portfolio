@@ -10,29 +10,32 @@ import Contactme from './Contactme/Contactme';
 import Project from './Projects/Project';
 import Footer from './Footer/Footer';
 import Navigations from './Shared/Navigation/Navigations/Navigations';
+import GitHubProviderContext from './Context/Context';
 
 function App() {
   return (
     <>
-      <Navigations />
+      <GitHubProviderContext>
+        <Navigations />
 
-      <Switch>
-        <Route path='/v1/about'>
-          <About />
-        </Route>
-        <Route path='/v1/contactme'>
-          <Contactme />
-        </Route>
-        <Route path='/v1/projects'>
-          <Project />
-        </Route>
+        <Switch>
+          <Route path='/v1/about'>
+            <About />
+          </Route>
+          <Route path='/v1/contactme'>
+            <Contactme />
+          </Route>
+          <Route path='/v1/projects'>
+            <Project />
+          </Route>
 
-        <Route path='/:url?' exact>
-          <MainPage />
-        </Route>
-      </Switch>
+          <Route path='/:url?' exact>
+            <MainPage />
+          </Route>
+        </Switch>
 
-      <Footer />
+        <Footer />
+      </GitHubProviderContext>
     </>
   );
 }

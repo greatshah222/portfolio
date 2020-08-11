@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Experience from '../Experience/Experience';
 import FeaturedProjects from '../FeaturedProjects/FeaturedProjects';
 import Skills from '../Skills/Skills';
+import Repos from '../Github/Repos/Repos';
 
 function MainPage() {
   return (
@@ -14,6 +15,7 @@ function MainPage() {
       <Services />
       <Experience />
       <FeaturedProjects />
+      <Repos />
       <Skills />
     </>
   );

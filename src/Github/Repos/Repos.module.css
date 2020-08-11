@@ -1,0 +1,40 @@
+.RepoPrimary {
+  width: 80%;
+  margin: auto;
+}
+.ChartContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+.TextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialIcon {
+  font-size: 3.2rem;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  color: var(--darkBlue);
+  transition: all 0.3s linear;
+}
+.socialIcon:hover {
+  color: var(--mainDark);
+}
+
+@media (max-width: 900px) {
+  .RepoPrimary {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 800px) {
+  .RepoPrimary {
+    width: 95%;
+    margin: auto;
+  }
+  .ChartContainer {
+    grid-template-columns: 1fr;
+  }
+}

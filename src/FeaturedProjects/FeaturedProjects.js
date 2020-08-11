@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 
 import styles from './FeaturedProjects.module.css';
 import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
+import Button from '../Shared/Button/Button';
 
 function FeaturedProjects() {
   useEffect(() => {
@@ -139,6 +140,11 @@ function FeaturedProjects() {
             </div>
           </div>
         </div>{' '}
+        <div className={styles.ProjectButton}>
+          <Button to='/v1/projects' btnType='hire'>
+            All projects
+          </Button>
+        </div>
       </section>
     </div>
   );

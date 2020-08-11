@@ -47,6 +47,7 @@ function Contactme() {
       history.push('/');
     } catch (error) {
       await toast.error(error.response.data.error.response);
+      console.log(error);
       console.log(error.response.data.error.response);
       setLoading(false);
     }
