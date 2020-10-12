@@ -136,9 +136,28 @@ function Experience() {
       <div className={classes.tags}>
         {' '}
         <div className={classes.tag}>Udemy</div>
-        <div className={classes.tag}>PRogramming with mosh</div>
+        <div className={classes.tag}>Programming with mosh</div>
+      </div>
+      <div className={classes.tag}>
+        Full Stack open 2020 University of Helsinki
       </div>
 
+      <div className={classes.textPrimary}>
+        <div className={classes.icon}>
+          <FaCertificate className={classes.socialIcon} />
+        </div>
+
+        <div className={classes.text}>
+          Full Stack Open Course ( University Of Helsinki)
+          <a
+            href='https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/fi/f23cf01882202fa813a25a90f2e8f06a'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLink />
+          </a>
+        </div>
+      </div>
       <div className={classes.textPrimary}>
         <div className={classes.icon}>
           <FaCertificate className={classes.socialIcon} />
