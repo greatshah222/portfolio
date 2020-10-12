@@ -6,6 +6,7 @@ import {
   faEnvelopeOpenText,
   faEnvelope,
   faInbox,
+  faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faAddressCard,
@@ -13,5 +14,6 @@ library.add(
   faEnvelope,
   faEnvelopeOpenText,
   faUser,
-  faInbox
+  faInbox,
+  faExternalLinkAlt
 );
