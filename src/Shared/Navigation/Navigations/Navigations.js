@@ -16,9 +16,7 @@ function Navigations() {
       <SideBar show={openSideBar}>
         <div className={classes.headerMobileNav}>
           <div className={classes.logoContainerSideBar}>
-            <h3>
-              <span>Bishal</span> Shah
-            </h3>
+            <img src={logoSideBar} alt='logo' className={classes.logoSideBar} />
           </div>
           <button
             className={classes.closeSideBarButton}
@@ -35,10 +33,7 @@ function Navigations() {
         <div className={`${classes.mainContaniner}`}>
           <div className={classes.navContainer}>
             <div className={classes.logoContainer}>
-              {/* <img src={logo} alt='logo' className={classes.logo} /> */}
-              <h3>
-                <span>Bishal</span> Shah
-              </h3>
+              <img src={logo} alt='logo' className={classes.logo} />
             </div>
             <button
               onClick={toggleSideBarHandler}
