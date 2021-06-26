@@ -46,6 +46,19 @@
   font-size: 1.5rem;
   font-family: var(--ff-secondary);
   font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.master {
+  font-size: 1rem !important;
+  font-family: var(--ff-secondary);
+  font-style: italic;
+}
+.pIcon {
+  font-size: 100%;
+  color: var(--darkBlue);
+  margin-right: 10px;
 }
 
 .footer {
@@ -1151,6 +1164,9 @@
   .info p {
     font-size: 2rem;
   }
+  .info .master {
+    font-size: 1.5rem !important;
+  }
 }
 @media (max-width: 550px) {
   .info h2 {
@@ -1158,5 +1174,8 @@
   }
   .info p {
     font-size: 1.5rem;
+  }
+  .info .master {
+    font-size: 1rem;
   }
 }

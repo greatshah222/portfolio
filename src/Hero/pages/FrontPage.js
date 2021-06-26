@@ -5,8 +5,10 @@ import classes from './FrontPage.module.css';
 import {
   FaFacebookSquare,
   FaGithubSquare,
+  FaLaptopCode,
   FaLinkedin,
   FaTwitter,
+  FaUniversity,
 } from 'react-icons/fa';
 import Button from '../../Shared/Button/Button';
 import { Animated } from 'react-animated-css';
@@ -18,7 +20,14 @@ function FrontPage() {
         <div className={classes.info}>
           {' '}
           <h2>I'm Bishal</h2>
-          <p>Freelance Fullstack Developer</p>
+          <p>
+            <FaLaptopCode className={classes.pIcon} /> Junior Software Developer
+            at Icareus Oy{' '}
+          </p>
+          <p className={classes.master}>
+            <FaUniversity className={classes.pIcon} />
+            Master's Student at Tampere University{' '}
+          </p>
           <Button btnType='hire' to='/v1/contactme'>
             Start a Conversation
           </Button>
